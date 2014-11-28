@@ -149,7 +149,7 @@ status_t AudioHardwareBase::dumpState(int fd, const Vector<String16>& args)
 }
 
 // default implementation calls its "without flags" counterpart
-AudioStreamOut* AudioHardwareInterface::openOutputStreamWithFlags(uint32_t devices,
+AudioStreamOut* AudioHardwareBase::openOutputStreamWithFlags(uint32_t devices,
                                           audio_output_flags_t flags,
                                           int *format,
                                           uint32_t *channels,
