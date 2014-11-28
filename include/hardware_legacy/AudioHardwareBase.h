@@ -51,6 +51,14 @@ public:
     /**This method dumps the state of the audio hardware */
     virtual status_t dumpState(int fd, const Vector<String16>& args);
 
+    virtual AudioStreamOut* openOutputStreamWithFlags(
+                                uint32_t devices,
+                                audio_output_flags_t flags=(audio_output_flags_t)0,
+                                int *format=0,
+                                uint32_t *channels=0,
+                                uint32_t *sampleRate=0,
+                                status_t *status=0);
+
 protected:
     /** returns true if the given mode maps to a telephony or VoIP call is in progress */
     virtual bool     isModeInCall(int mode)
